@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -104,21 +105,23 @@
 	</div> 
 	</div> 
 	
+	<form:form name="submitForm" method="POST">
 	<div class="container"> 
 	<h3>Login</h3> 
 	<div class="form-group"> 
-	<label for="Username">User name:</label><br> 
-	<input type="Username" class="form-control" style=width:30% name="UserName" placeholder="Enter user naame"> 
+	<label for="username">User name:</label><br> 
+	<input type="text" class="form-control" style=width:30% name="username" placeholder="Enter user naame"> 
 	</div> 
 	<div class="form-group"> 
-	<label for="pwd">Password:</label> 
-	<input type="password" class="form-control" style=width:30% id="pwd" placeholder="Enter password"> 
+	<label for="password">Password:</label> 
+	<input type="password" class="form-control" style=width:30% name="password" placeholder="Enter password"> 
 	</div> 
 	<div class="checkbox"> 
 	<label><input type="checkbox"> Remember me</label> 
 	</div> 
-	<button type="submit" class="btn btn-default">Submit</button> 
+	<input type="submit" class="btn btn-default" value="submit"> 
 	</div> 
+	</form:form>
 	<p> 
 	<p> 
 	<p> 
